@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#61392d"
+    android:keepScreenOn="true"
+    android:orientation="vertical" xmlns:android1="http://schemas.android.com/apk/res/android">
+
+
+<ImageView
+    android:id="@+id/splash_view"
+    android:layout_width="fill_parent"
+    android:layout_height="0dip"
+    android:layout_weight="1"
+    android:background="#61392d"
+    android:scaleType="fitCenter"
+    android:src="@drawable/bible_splash"
+    android1:contentDescription="@string/app_name" />
+
+ <ProgressBar
+     android:id="@+id/splash_progress"
+     style="@android:style/Widget.ProgressBar.Horizontal"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:indeterminateOnly="false"
+     android:maxHeight="5dip"
+     android:minHeight="5dip"
+     android1:indeterminate="true" />
+
+</LinearLayout>

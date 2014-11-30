@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Библия</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_bible">BibleActivity</string>
+    <string name="prev_verse">&lt;&lt;</string>
+    <string name="next_verse">&gt;&gt;</string>
+    <string name="change_book">Книга</string>
+    <string name="change_chapter">Глава</string>
+    <string name="search_hint">Поиск в Библии</string>
+    <string name="bible_startimage">Библия</string>
+    <string name="bible_button">Библия</string>
+    <string name="stfathers_button">Толкования</string>
+    <string name="stfathers_comments">Толкования</string>
+
+</resources>

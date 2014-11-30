@@ -1,0 +1,98 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mav.bible"
+    android:installLocation="auto"
+    android:versionCode="21"
+    android:versionName="2.9.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="com.mav.bible.BibleApp" >
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:label="@string/app_name"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.mav.bible.STARTINGPOINT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BibleActivity"
+            android:label="@string/title_activity_bible"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.mav.bible.BIBLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            
+            <meta-data android:name="android.app.default_searchable"
+                   android:value=".SearchActivity" />
+            
+            <!-- <meta-data android:name="android.app.searchable"
+                   android:resource="@xml/searchable"/>-->
+        </activity>
+        <activity
+            android:name=".ContentsActivity"
+            android:label="@string/app_name"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.mav.bible.CONTENTS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StFathersContentsActivity"
+            android:label="@string/stfathers_comments"
+            android:exported="false"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.mav.bible.CONTENTS_STFATHERS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/app_name"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                   android:resource="@xml/searchable"/>
+        </activity>
+        
+        <provider
+             android:name=".BibleSuggestionProvider"
+             android:authorities="com.mav.bible.BibleSuggestionProvider" 
+             android:exported="false"/>
+        
+        <activity
+            android:name=".StFathersActivity"
+            android:label="@string/app_name"
+            android:exported="false" >
+			<intent-filter>
+			    <category android:name="android.intent.category.DEFAULT" />
+			    <action android:name="android.intent.action.VIEW" />
+			    <data android:scheme="com.mav.bible" />  
+			</intent-filter>
+        </activity>
+        
+    </application>
+</manifest>
